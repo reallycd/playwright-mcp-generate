@@ -1,0 +1,20 @@
+{
+  "name": "Playwright MCP Demo",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
+  "forwardPorts": [3000, 9323],
+  "postCreateCommand": "npm install && npx playwright install --with-deps",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-playwright.playwright",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
